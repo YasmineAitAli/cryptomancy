@@ -27,6 +27,7 @@ export default{
 </script>
 
 <template>
+
   <div class="test">
     <h1 class="test2">Price by symbol</h1>
     <input type="text" class="input" v-model="search" placeholder="Enter symbol..." @keypress="fetchPrice" >

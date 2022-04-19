@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import Register from "../views/Register.vue";
+import Login from "../views/Login.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +10,7 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+      meta : { authRequired: true}
     },
     {
       path: "/about",
@@ -16,6 +19,8 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/AboutView.vue"),
+      meta : { authRequired: true}
+
     },
     {
       path: "/price",
@@ -24,8 +29,23 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/PriceView.vue"),
+      meta : { authRequired: true}
+
+    },
+    {
+      path: "/login",
+      name: "Login",
+      component: Login,
+    },
+    {
+      path: "/register",
+      name: "Register",
+      component: Register,
     },
   ],
 });
 
+
+
 export default router;
+

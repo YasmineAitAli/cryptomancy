@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "firebase": "^9.6.9",
+    "bootstrap-vue": "^2.22.0",
+    "firebase": "^9.6.11",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

@@ -12,16 +12,22 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCZM7ZDQZ-Tfl3322xCUWombNXD1BTc7CQ",
-  authDomain: "cryptomancy-1.firebaseapp.com",
-  projectId: "cryptomancy-1",
-  storageBucket: "cryptomancy-1.appspot.com",
-  messagingSenderId: "219884591769",
-  appId: "1:219884591769:web:dc07fce7421b47d4557608"
+  apiKey: "AIzaSyBTsZB-dyYfiask1TEYdNNm-0DrMP5SMhs",
+  authDomain: "cryptoseyaa.firebaseapp.com",
+  projectId: "cryptoseyaa",
+  storageBucket: "cryptoseyaa.appspot.com",
+  messagingSenderId: "58774914415",
+  appId: "1:58774914415:web:36fca5344160bc0509549a",
+  measurementId: "G-94G004XCK4"
 };
-
 // Initialize Firebase
 const appFire = initializeApp(firebaseConfig);
+import { onAuthStateChanged, getAuth } from "firebase/auth";
+
+     const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+          store.dispatch("fetchUser", user);
+        });
 
 const app = createApp(App).use(store);
 
@@ -29,3 +35,5 @@ app.use(router);
 app.use(store);
 
 app.mount("#app");
+           
+
