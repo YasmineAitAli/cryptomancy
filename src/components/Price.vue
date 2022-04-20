@@ -144,6 +144,7 @@ export default{
   .crypto-container{
     background: white;
     width: 150%;
+    margin: 0 0 20px 0;
     margin-left: 50%;
     padding: 1em;
     box-shadow: 1px 1px 0 lightgrey;
