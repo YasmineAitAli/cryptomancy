@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import About from "@/components/About.vue";
+import News from "@/components/News.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 
 </script>
 
 <template>
   <main>
-          <HelloWorld />
+              <HelloWorld />
 
-    <About />
+    <News />
   </main>
 </template>

@@ -92,7 +92,7 @@ export default createStore({
           commit('setStatus','success')
           commit('setError', null)
           console.log("in");
-          router.push('/')
+          router.push('/home')
       })
         .catch((error) => {
           alert('didnt log in');

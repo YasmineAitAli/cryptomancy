@@ -49,13 +49,13 @@ export default defineComponent({
   computed: {
     ...mapGetters(["user"]),
     nextRoute(){
-      return this.$route.query.redirect || "/";
+      return this.$route.query.redirect || "/home";
     }
   },
   watch:{
     user: function(changedUser) {
       if (changedUser) {
-          this.$router.push('/')
+          this.$router.push('/home')
       }
     },
   },
@@ -66,7 +66,7 @@ export default defineComponent({
         .then((user) => {
           // Signed in
           console.log(user);
-          this.$router.push('/')
+          this.$router.push('/home')
         })
           .catch((error) => {
         const errorCode = error.code;

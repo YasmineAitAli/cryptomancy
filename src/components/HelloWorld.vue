@@ -31,14 +31,6 @@ export default{
 } else {
         this.email = "waaaaaaalou";
 }
-    axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,ADA,SOL&tsyms=USD,EUR')      .then(response => {
-        this.cryptos = response.data
-        console.log(response)
-      })
-      .catch(e => {
-        this.errors.push(e)
-      })
-
 
   },
   methods: {
@@ -56,9 +48,9 @@ export default{
 <template>
 <ul>
 
-  <RouterLink to="/"><li><a class="active" href="#home">Home</a></li> </RouterLink>
-  <RouterLink to="/about"><li><a >About</a> </li> </RouterLink>
-  <RouterLink to="/price"><li><a >Price</a></li> </RouterLink>
+  <RouterLink to="/home"><li><a >Home</a></li> </RouterLink>
+  <RouterLink to="/price"><li><a >Price</a> </li> </RouterLink>
+  <RouterLink to="/news"><li><a >News</a></li> </RouterLink>
   <li style="float:right"><button style="background-color: #f44336; font-size: 16px;
   cursor: pointer;border: none;
     margin:2px;
@@ -71,22 +63,18 @@ export default{
  
 </ul>
 <div class="middle">
-    <h1> Welcome {{name }} to CRYPTOMANCY</h1>
+    <section class="section">
+      <img class="image" src="@/assets/logo.png"  /> 
+      <div class="title"><p class="p" >Welcome {{ name }}</p>
+      </div>
+    </section>
     <hr>
   </div>
-
-    <h1 class="test2">Currently on the top</h1>
-
-  <div class="cards">
-    <div class="card card-1" v-for="(value,key) in cryptos">
-      <h2 class="card__title">{{ key }} : {{ value.EUR }} €</h2>
-    </div>
-  </div><br>
-    <hr>
 
 </template>
 
 <style>
+@import url('http://fonts.cdnfonts.com/css/welcome');
   body{
     background: #f1f1f1;
   }
@@ -130,8 +118,18 @@ li a:hover:not(.active) {
 
 
 
+  .section {
+    display: flex;
+    background-color: #04AA6D;
+  }
 
-
+  .p{
+    color: rgb(241, 253, 235);
+    font-size: 42px;
+    font-family: 'Welcome', sans-serif;
+    justify-items: right;
+    padding-left: 70px;
+    }
 
 
 
