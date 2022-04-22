@@ -1,5 +1,7 @@
 <script setup lang="ts">
+// @ts-ignore
 import TheWelcome from "@/components/TheWelcome.vue";
+// @ts-ignore
 import HelloWorld from "@/components/HelloWorld.vue";
 
 
@@ -9,7 +11,6 @@ import HelloWorld from "@/components/HelloWorld.vue";
   
   <main>
           <HelloWorld />
-
     <TheWelcome />
     <body>
 

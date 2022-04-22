@@ -5,7 +5,7 @@ script = logic
 <script>
 import axios from 'axios';
 export default{
-  data: () => ({ //error function
+  data: () => ({
     news: [],  //reference the properties we gonna need
     errors: []
   }),

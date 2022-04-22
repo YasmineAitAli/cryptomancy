@@ -65,7 +65,7 @@ export default{
 <div class="middle">
     <section class="section">
       <img class="image" src="@/assets/logo.png"  /> 
-      <div class="title"><p class="p" >Welcome {{ name }}</p>
+      <div class="title">Welcome {{ name }}
       </div>
     </section>
     <hr>
@@ -123,12 +123,14 @@ li a:hover:not(.active) {
     background-color: #04AA6D;
   }
 
-  .p{
+  .title{
     color: rgb(241, 253, 235);
-    font-size: 42px;
-    font-family: 'Welcome', sans-serif;
-    justify-items: right;
-    padding-left: 70px;
+    font-size: 35px;
+    font-family: 'Welcome',Helvetica;
+    display: flex;
+    padding-left: 1em;
+    height: 130px;
+    align-items: center;
     }
 
 

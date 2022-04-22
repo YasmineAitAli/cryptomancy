@@ -25,12 +25,12 @@ export default {
     })
 
   },
-  methods:{
+  /*methods:{
     ...mapActions('auth', ['handleAuthStateChange'])
   },
   mounted(){
     this.handleAuthStateChange()
-  }
+  }*/
 }
 </script>
 

@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
+// @ts-ignore
 import HomeView from "../views/HomeView.vue";
+// @ts-ignore
 import Register from "../views/Register.vue";
+// @ts-ignore
 import Login from "../views/Login.vue";
 
 const router = createRouter({
@@ -9,6 +12,16 @@ const router = createRouter({
     {
       path: "/",
       redirect: '/login'
+    },
+    {
+      path: "/login",
+      name: "Login",
+      component: Login,
+    },
+    {
+      path: "/register",
+      name: "Register",
+      component: Register,
     },
     {
       path: "/home",
@@ -36,16 +49,7 @@ const router = createRouter({
       meta : { authRequired: true}
 
     },
-    {
-      path: "/login",
-      name: "Login",
-      component: Login,
-    },
-    {
-      path: "/register",
-      name: "Register",
-      component: Register,
-    },
+
   ],
 });
 

@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import News from "@/components/News.vue";
+// @ts-ignore
 import HelloWorld from "@/components/HelloWorld.vue";
+// @ts-ignore
+import News from "@/components/News.vue";
 
 </script>
 
 <template>
   <main>
-              <HelloWorld />
-
-    <News />
+          <HelloWorld />
+  <News />
   </main>
 </template>
+

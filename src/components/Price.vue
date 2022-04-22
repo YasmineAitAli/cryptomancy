@@ -62,7 +62,7 @@ export default{
 
 <template>
     <div class="about">
-      <div style="width: 60%; float:left">
+      <div style="width: 65%; float:left">
         <h2>Search cryptocurrencies available by symbol</h2>
         <input type="text" class="input" v-model="search">
         <h3>Available cryptocurrencies:</h3>
@@ -76,7 +76,7 @@ export default{
       </div>
       <div>
         <h2>Price by symbol</h2>
-        <button class="button" v-on:click="fetchPrice">Show price</button><br><br>
+        <button class="button" v-on:click="fetchPrice"> Show price </button><br><br>
         <div class="crypto-container" v-for="(value,key) in prices">
           <span class="left"> {{ key }} :</span>
           <span class="right"> {{ value.USD }} $</span><br><br> 
@@ -117,9 +117,9 @@ export default{
   }
   .about{
     background: white;
-    width: 90%;
-    margin: 0 auto 4px auto;
-    padding: 1em;
+    width: 80%;
+    margin: 20px auto 4px auto;
+    padding: 3em;
     box-shadow: 1px 1px 0 lightgrey;
     display: flex;
     flex-direction: row;
@@ -128,24 +128,20 @@ export default{
   .button {
   background-color:#bec24b;
   display: block;
-  width: 150%;
-  margin-left: 50%;
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
+  font-size: 18px;    
+  padding: 1em;
+  box-shadow: 1px 1px 0 lightgrey;
   cursor: pointer;
 }
   .button:hover {background-color: #10c558}
 
   .crypto-container{
     background: white;
-    width: 150%;
     margin: 0 0 20px 0;
-    margin-left: 50%;
     padding: 1em;
     box-shadow: 1px 1px 0 lightgrey;
   }
